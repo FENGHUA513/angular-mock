@@ -1,3 +1,4 @@
+import { MenulistService } from './../../servers/menulist.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.less']
 })
 export class MenuComponent implements OnInit {
-
-  constructor() { }
+  menuList: Array = [];
+  constructor(private menulistServer: MenulistService) {
+    this.menuList = menulistServer.getMenuList();
+  }
 
   ngOnInit() {
+    console.log(this.menuList)
   }
 
 }

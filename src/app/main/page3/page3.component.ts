@@ -1,4 +1,4 @@
-import { map } from 'rxjs/operators';
+import { map, switchMap} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
 @Component({
@@ -16,5 +16,4 @@ export class Page3Component implements OnInit {
         console.log(list);
       });
   }
-
 }

@@ -1,26 +1,10 @@
 <ul nz-menu [nzMode]="'inline'"  [nzInlineCollapsed]="isCollapsed">
-  <li nz-menu-item nz-tooltip [nzTitle]="isCollapsed ? 'Navigation One' : ''">
-    <a routerLink="/page1"> 
+  <li *ngFor="let item of menuList" nz-menu-item nz-tooltip [nzTitle]="isCollapsed ? 'Navigation One' : ''">
+    <a routerLink={{item.path}}> 
       <span title>
         <i nz-icon type="mail"></i>
-        <span>我是page1</span>     
+        <span>{{item.name}}</span>     
       </span>
     </a>
   </li>
-  <li nz-menu-item nz-tooltip [nzTitle]="isCollapsed ? 'Navigation One' : ''">
-    <a routerLink="/page2"> 
-      <span title>
-        <i nz-icon type="mail"></i>
-        <span>我是page2</span>     
-      </span>
-    </a>
-  </li>
-  <li nz-menu-item nz-tooltip [nzTitle]="isCollapsed ? 'Navigation One' : ''">
-      <a routerLink="/page3"> 
-        <span title>
-          <i nz-icon type="mail"></i>
-          <span>我是page3</span>     
-        </span>
-      </a>
-    </li>
 </ul>
