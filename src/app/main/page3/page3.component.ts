@@ -10,7 +10,7 @@ export class Page3Component implements OnInit {
   constructor(private http: HttpClient) { }
   list;
   ngOnInit() {
-    this.http.get('/api/list').pipe(map(res => res.list[0])).subscribe(
+    this.http.get('/api/list').pipe(map(res => res.list)).subscribe(
       list => {
         this.list = list;
         console.log(list);
