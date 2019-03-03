@@ -13,7 +13,9 @@ export class Page3Component implements OnInit {
   constructor(private http: HttpClient, private apiService: ApiService) { }
   private list;
   ngOnInit() {
-    this.apiService.get('/api/list').subscribe(
+    // const params = new HttpParams().set('fff', '3').set('ddd', 'fdsffdsafs');
+    const params = new HttpParams({fromString: 'orderBy="$key"&limitToFirst=1'});
+    this.apiService.get('/api/list', params).subscribe(
       res => this.list = res.list
     );
   }
