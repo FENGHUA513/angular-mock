@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.less']
 })
 export class MenuComponent implements OnInit {
-  menuList: Array = [];
+  menuList: Array<object>;
   constructor(private menulistServer: MenulistService) {
     this.menuList = menulistServer.getMenuList();
   }
 
   ngOnInit() {
-    console.log(this.menuList)
+    console.log(this.menuList);
   }
 
 }

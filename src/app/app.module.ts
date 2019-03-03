@@ -1,3 +1,4 @@
+import { ApiService } from './servers/api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,7 +16,6 @@ import { Page1Component } from './main/page1/page1.component';
 import { Page2Component } from './main/page2/page2.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Page3Component } from './main/page3/page3.component';
-
 registerLocaleData(zh);
 
 @NgModule({
@@ -36,7 +36,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
