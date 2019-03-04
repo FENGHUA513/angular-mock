@@ -6,8 +6,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-mock';
-  constructor() { }
-
+  isLogin = false;
+  constructor() { 
+    this.isLogin = !!window.localStorage.getItem('token')
+  }
+ 
   ngOnInit() {
+  }
+  loginSucess(token) {
+    this.isLogin = true
+    window.localStorage.setItem('token', token)
+  }
+  logoutSucess() {
+    this.isLogin = false
   }
 }

@@ -1,0 +1,28 @@
+
+<form [formGroup]="validateForm" nz-form class="login-form" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group [nzPrefix]="prefixUser">
+        <input nz-input formControlName="userName" type="text" placeholder="请输入用户名或手机号">
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group [nzPrefix]="prefixUser">
+        <input nz-input formControlName="password" type="text" placeholder="请输入密码">
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <label nz-checkbox>
+        <span>Remember me</span>
+      </label>
+      <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+      <button type="submit" nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+      Or
+      <a href="">register now!</a>
+    </nz-form-control>
+  </nz-form-item>
+</form>
