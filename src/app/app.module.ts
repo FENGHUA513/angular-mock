@@ -16,10 +16,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { Page1Component } from './main/page1/page1.component';
 import { Page2Component } from './main/page2/page2.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { Page3Component } from './main/page3/page3.component';
 import { LoginComponent } from './main/login/login.component';
 registerLocaleData(zh);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +26,6 @@ registerLocaleData(zh);
     Page1Component,
     Page2Component,
     FooterComponent,
-    Page3Component,
     LoginComponent
   ],
   imports: [
