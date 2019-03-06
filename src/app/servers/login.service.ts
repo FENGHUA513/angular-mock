@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private apiservice: ApiService) {}
   ngOnInit() {
   }
-  login(data) {
+  login(data: object) {
     return this.apiservice.post('api/login', data).pipe(
       tap(res => console.log('loginsuccess')),
       map(res => res.token)
