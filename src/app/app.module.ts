@@ -1,3 +1,4 @@
+import { MenulistService } from './servers/menulist.service';
 import { ApiService } from './servers/api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -39,7 +40,7 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }, ApiService],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }, ApiService, MenulistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
