@@ -1,6 +1,7 @@
 <p>
   我是第一页的内容
 </p>
+<div>{{time | async | date:"yyyy-MM-dd HH:mm:ss"}}</div>
 <nz-carousel nzVertical>
   <div nz-carousel-content *ngFor="let index of array"><h3>{{index}}</h3></div>
 </nz-carousel>`
