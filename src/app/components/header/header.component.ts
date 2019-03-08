@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -6,12 +6,15 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   token: string;
+  @Input('test') t: string;
   @Output() logoutListen = new EventEmitter();
   constructor() {
     this.token = window.localStorage.getItem('token')
    }
 
   ngOnInit() {
+    console.log(this.t)
+    // debugger
   }
   logout() {
     window.localStorage.removeItem('token')
