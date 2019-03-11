@@ -18,6 +18,7 @@ import { Page2Component } from './main/page2/page2.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './main/login/login.component';
 import { RequestInterceptor } from './interceptors/request.interceptor';
+import { PreloadService } from './provieders/preloadStrategy';
 registerLocaleData(zh);
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ registerLocaleData(zh);
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
     { provide: NZ_I18N, useValue: zh_CN },
     ApiService,
-    MenulistService
+    MenulistService,
+    PreloadService
   ],
   bootstrap: [AppComponent]
 })
