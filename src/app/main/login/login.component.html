@@ -5,6 +5,11 @@
       <nz-input-group [nzPrefix]="prefixUser">
         <input nz-input formControlName="userName" type="text" placeholder="请输入用户名或手机号">
       </nz-input-group>
+      <div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+        <!-- <p *ngIf="!!userName.errors.required">请填写用户名</p>
+        <p *ngIf="!!userName.errors.maxlength">最多11位</p> -->
+        <p>{{userName.getError('phoneError')}}</p>
+      </div>
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
@@ -28,3 +33,4 @@
 </form>
 <ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
 <ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>
+<div>{{userName.errors | json}}</div>
