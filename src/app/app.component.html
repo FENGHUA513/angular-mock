@@ -2,7 +2,7 @@
 <ng-container *ngIf="isLogin">
   <nz-layout class="layout">
     <nz-header>
-      <app-header (logoutListen)="logoutSucess()" [test]="'999999'"></app-header>
+      <app-header #head (logoutListen)="logoutSucess()" [test]="'999999'"></app-header>
     </nz-header>
     <nz-layout>
       <nz-sider [nzWidth]="200" style="background:#fff">

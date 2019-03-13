@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { HeaderComponent } from './components/header/header.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +11,12 @@ export class AppComponent {
   constructor() { 
     this.isLogin = !!window.localStorage.getItem('token')
   }
- 
+  @ViewChild('head')
+  head: HeaderComponent;
   ngOnInit() {
+  }
+  ngAfterViewInit() {
+    this.head.log('@viewchild')
   }
   loginSucess(token) {
     this.isLogin = true

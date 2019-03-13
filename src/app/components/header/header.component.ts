@@ -20,4 +20,7 @@ export class HeaderComponent implements OnInit {
     window.localStorage.removeItem('token')
     this.logoutListen.emit('logoutsucess')
   }
+  log(str) {
+    console.log(str)
+  }
 }
