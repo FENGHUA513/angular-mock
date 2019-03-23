@@ -10,18 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 export class Page1Component implements OnInit {
   array: number[];
   time: Observable<Date>;
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute) {
     this.array = [1, 2, 3];
     this.time = interval(1000).pipe(map(
       _ => new Date()
-    ))
+    ));
   }
   ngOnInit() {
     this.route.params.subscribe(
       res => {
-        console.log(this.route.snapshot.paramMap.get('id'))
-        console.log(res.id)
+        console.log(this.route.snapshot.paramMap.get('id'));
+        console.log(res.id, 'id');
       }
-    )
+    );
   }
 }

@@ -16,13 +16,13 @@ export class AppComponent {
   ngOnInit() {
   }
   ngAfterViewInit() {
-    this.head.log('@viewchild')
+    // this.head.log('@viewchild');
   }
   loginSucess(token) {
-    this.isLogin = true
-    window.localStorage.setItem('token', token)
+    this.isLogin = true;
+    window.localStorage.setItem('token', token);
   }
   logoutSucess() {
-    this.isLogin = false
+    this.isLogin = false;
   }
 }

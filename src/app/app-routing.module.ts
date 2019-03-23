@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'page1/:id', component: Page1Component },
   { path: 'page2', component: Page2Component },
   { path: 'page3', loadChildren: './main/page3/page3.module#Page3Module', data: { preload: true } },
-  { path: '', redirectTo: '/page1', pathMatch: 'full' }
+  { path: '', redirectTo: '/page2', pathMatch: 'full' }
 ];
 
 @NgModule({

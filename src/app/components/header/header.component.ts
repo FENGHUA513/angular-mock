@@ -6,21 +6,20 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   token: string;
-  @Input('test') t: string;
+  @Input() test: string;
   @Output() logoutListen = new EventEmitter();
   constructor() {
-    this.token = window.localStorage.getItem('token')
+    this.token = window.localStorage.getItem('token');
    }
 
   ngOnInit() {
-    console.log(this.t)
-    // debugger
+    console.log(this.test, '@input test');
   }
   logout() {
-    window.localStorage.removeItem('token')
-    this.logoutListen.emit('logoutsucess')
+    window.localStorage.removeItem('token');
+    this.logoutListen.emit('logoutsucess');
   }
   log(str) {
-    console.log(str)
+    console.log(str);
   }
 }
