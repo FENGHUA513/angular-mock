@@ -11,7 +11,7 @@ export class AppComponent {
   constructor() { 
     this.isLogin = !!window.localStorage.getItem('token')
   }
-  @ViewChild('head')
+  @ViewChild('head', { static: false })
   head: HeaderComponent;
   ngOnInit() {
   }
