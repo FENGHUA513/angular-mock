@@ -9,20 +9,9 @@ export class AppComponent {
   title = 'ng-mock';
   isLogin = false;
   constructor() { 
-    this.isLogin = !!window.localStorage.getItem('token')
   }
   @ViewChild('head', { static: false })
   head: HeaderComponent;
   ngOnInit() {
-  }
-  ngAfterViewInit() {
-    // this.head.log('@viewchild');
-  }
-  loginSucess(token) {
-    this.isLogin = true;
-    window.localStorage.setItem('token', token);
-  }
-  logoutSucess() {
-    this.isLogin = false;
   }
 }

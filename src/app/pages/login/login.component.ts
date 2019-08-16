@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from
 import { LoginService } from 'src/app/servers/login.service';
 import { NzMessageService } from 'ng-zorro-antd';
 import { phoneValidator } from 'src/app/validators/phone.validator';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,11 +11,11 @@ import { phoneValidator } from 'src/app/validators/phone.validator';
 })
 export class LoginComponent implements OnInit {
   validateForm: FormGroup;
-  @Output() loginListen = new EventEmitter();
   constructor(
     private fb: FormBuilder,
     private loginService: LoginService,
-    private message: NzMessageService
+    private message: NzMessageService,
+    private router: Router
   ) { 
     // this.validateForm = this.fb.group({
     //   'userName': ['', Validators.required, Validators.maxLength(11)],
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
     return this.validateForm.get('userName')
   }
   submitForm() {
+    this.router.navigateByUrl('/');
     // 登陆接口参数
     // [disabled]="!validateForm.valid"
     console.log(this.validateForm)
@@ -39,7 +41,7 @@ export class LoginComponent implements OnInit {
       let parame = this.validateForm.value
       this.loginService.login(parame).subscribe(
         res => {
-          this.loginListen.emit(res)
+          this.router.navigateByUrl('/');
         }
       )
     } else {
