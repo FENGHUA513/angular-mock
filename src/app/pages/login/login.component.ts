@@ -3,7 +3,8 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from
 import { LoginService } from 'src/app/servers/login.service';
 import { NzMessageService } from 'ng-zorro-antd';
 import { phoneValidator } from 'src/app/validators/phone.validator';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,9 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private loginService: LoginService,
     private message: NzMessageService,
-    private router: Router
+    private router: Router,
+    private title: Title,
+    private activatedRoute: ActivatedRoute
   ) { 
     // this.validateForm = this.fb.group({
     //   'userName': ['', Validators.required, Validators.maxLength(11)],
@@ -27,7 +30,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  ngOnInit() {   
+  ngOnInit() {
+    this.title.setTitle(this.activatedRoute.snapshot.data.title)
   }
   get userName(): AbstractControl {
     return this.validateForm.get('userName')
