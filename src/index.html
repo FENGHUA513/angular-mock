@@ -1,15 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>NgMock</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8" />
+    <title>NgMock</title>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<style>
-  .loader {
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <style>
+    .loader {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,7 +23,7 @@
     }
 
     .loader h1 {
-      font-family: "Helvetica Neue", Helvetica, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
       font-weight: normal;
       font-size: 24px;
       letter-spacing: 0.04rem;
@@ -32,8 +32,17 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-image: repeating-linear-gradient(to right,
-          #F44336, #9C27B0, #3F51B5, #03A9F4, #009688, #8BC34A, #FFEB3B, #FF9800);
+      background-image: repeating-linear-gradient(
+        to right,
+        #f44336,
+        #9c27b0,
+        #3f51b5,
+        #03a9f4,
+        #009688,
+        #8bc34a,
+        #ffeb3b,
+        #ff9800
+      );
       background-size: 750% auto;
       background-position: 0 100%;
       animation: gradient 20s infinite;
@@ -50,12 +59,12 @@
         background-position: -750% 0;
       }
     }
-</style>
-<body>
-  <app-root>
-    <div class="loader">
-      <h1>LOADING</h1>
-    </div>
-  </app-root>
-</body>
+  </style>
+  <body>
+    <app-root>
+      <div class="loader">
+        <h1>LOADING</h1>
+      </div>
+    </app-root>
+  </body>
 </html>
