@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ng-mock'
   isLogin = false
   constructor() {}
-  @ViewChild('head', { static: false })
+  @ViewChild('head')
   head: HeaderComponent
   ngOnInit() {}
 }
