@@ -3,19 +3,24 @@
     <nz-form-item>
       <nz-form-control>
         <nz-input-group [nzPrefix]="prefixUser">
-          <input nz-input formControlName="userName" type="text" placeholder="请输入用户名或手机号">
+          <input
+            nz-input
+            formControlName="userName"
+            type="text"
+            placeholder="请输入用户名或手机号"
+          />
         </nz-input-group>
         <div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
           <!-- <p *ngIf="!!userName.errors.required">请填写用户名</p>
           <p *ngIf="!!userName.errors.maxlength">最多11位</p> -->
-          <p>{{userName.getError('phoneError')}}</p>
+          <p>{{ userName.getError('phoneError') }}</p>
         </div>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control>
         <nz-input-group [nzPrefix]="prefixLock">
-          <input nz-input formControlName="password" type="text" placeholder="请输入密码">
+          <input nz-input formControlName="password" type="text" placeholder="请输入密码" />
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
@@ -25,7 +30,9 @@
           <span>Remember me</span>
         </label>
         <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
-        <button type="submit" nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+        <button type="submit" nz-button class="login-form-button" [nzType]="'primary'">
+          Log in
+        </button>
         Or
         <a href="">register now!</a>
       </nz-form-control>

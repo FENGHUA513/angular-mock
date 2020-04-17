@@ -145,5 +145,8 @@
       }
     }
   },
-  "defaultProject": "ng-mock"
+  "defaultProject": "ng-mock",
+  "cli": {
+    "analytics": "dbf83158-36d3-4cf7-ae5b-89857d86b001"
+  }
 }
