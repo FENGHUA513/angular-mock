@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4203 -o & npm run format --proxy-config proxy.conf.json",
+    "start": "ng serve --proxy-config proxy.conf.json --port 4203 -o & npm run format",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock": "nodemon ./mock/mockserver.js",
-    "format": "onchange 'src/**/*.js' 'src/**/*.ts' 'src/**/*.less' 'src/**/*.html' -- prettier --write {{changed}}"
+    "mock": "nodemon ./src/mock/mockserver.js",
+    "format": "onchange 'src/**/*.js' 'src/**/*.ts' 'src/**/*.less' 'src/**/*.html' 'src/**/*.json' -- prettier --write {{changed}}"
   },
   "private": true,
   "dependencies": {
