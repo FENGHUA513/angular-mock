@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock": "nodemon ./mock/mockserver.js"
+    "mock": "nodemon ./src/mock/mockserver.js"
   },
   "private": true,
   "dependencies": {
