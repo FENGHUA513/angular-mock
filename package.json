@@ -23,7 +23,7 @@
     "@angular/router": "~9.1.2",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
-    "ng-zorro-antd": "^9.0.1",
+    "ng-zorro-antd": "^10.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
